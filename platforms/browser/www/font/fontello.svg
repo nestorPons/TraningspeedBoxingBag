@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="cog" unicode="&#xe800;" d="M911 295l-133-56q-8-22-12-31l55-133-79-79-135 53q-9-4-31-12l-55-134-112 0-56 133q-11 4-33 13l-132-55-78 79 53 134q-1 3-4 9t-6 12-4 11l-131 55 0 112 131 56 14 33-54 132 78 79 133-54q22 9 33 13l55 132 112 0 56-132q14-5 31-13l133 55 80-79-54-135q6-12 12-30l133-56 0-112z m-447-111q69 0 118 48t49 118-49 119-118 50-119-50-49-119 49-118 119-48z" horiz-adv-x="928" />
+
+<glyph glyph-name="cancel-circle" unicode="&#xe801;" d="M465 797q184 0 315-131t131-316-131-315-315-132-316 132-131 315 131 316 316 131z m220-588l-141 142 141 141-79 79-142-141-141 141-79-79 141-141-141-142 79-79 141 141 142-141z" horiz-adv-x="928" />
+
+<glyph glyph-name="play" unicode="&#xe802;" d="M18 797l670-446-670-448 0 894z" horiz-adv-x="705" />
+
+<glyph glyph-name="pause" unicode="&#xe803;" d="M18-97l0 894 223 0 0-894-223 0z m446 0l0 894 224 0 0-894-224 0z" horiz-adv-x="705" />
+</font>
+</defs>
+</svg>

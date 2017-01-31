@@ -1,0 +1,76 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        }
+    }
+}

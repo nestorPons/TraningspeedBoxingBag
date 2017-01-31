@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'mainFont';
+  src: url('../font/DISPLAY FREE TFB.eot');
+  src: url('../font/DISPLAY FREE TFB.woff') format('woff'), url('../font/DISPLAY FREE TFB.ttf') format('truetype'), url('../font/DISPLAY FREE TFB.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+body {
+  font-family: mainFont, Arial;
+  -webkit-touch-callout: none;
+  /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;
+  /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
+  /* prevent copy paste, to allow, change 'none' to 'text' */
+  background-color: #000000;
+  background-attachment: fixed;
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+  display: none;
+}
+h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 20px 10px ;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
+}
+/* Portrait layout (default) */
+input {
+  border-radius: 5px;
+}
+.app {
+  position: absolute;
+  /* position in the center of the screen */
+  left: 0;
+  height: 80%;
+  /* text area height */
+  width: 100%;
+  /* text area width */
+  text-align: center;
+}
+.app #btn {
+  width: 100%;
+  height: 100%;
+  background: #ff0000;
+  font-size: 7em;
+  color: #ffffff;
+}
+.app .c1 {
+  width: 1em;
+}
+.app #menu {
+  color: #ffffff;
+  height: 50px;
+  font-weight: normal;
+  overflow: visible;
+  padding: 0px;
+  text-align: center;
+}
+.app #menu i {
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  float: right;
+}
+.app #menu #crono {
+  font-size: 2em;
+  color: #ffffff;
+  margin-top: 18px;
+}
+.app #menu #crono div {
+  display: inline-block;
+}
+.app .divider {
+  font-family: Arial, Helvetia, Serif;
+  vertical-align: text-bottom;
+  font-size: 24px;
+}
+.app .divider:before {
+  content: ":";
+  color: #ffffff;
+  text-align: center;
+}
+/* Landscape layout (with min-width) */
+#config {
+  display: none;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+  height: 100%;
+  /* Bordered form */
+  /* Full-width inputs */
+  /* Set a style for all buttons */
+  /* Extra style for the cancel button (red) */
+  /* Center the avatar image inside this container */
+  /* Avatar image */
+  /* Add padding to containers */
+  /* The "Forgot password" text */
+  /* Change styles for span and cancel button on extra small screens */
+}
+#config form {
+  border: 3px solid #f1f1f1;
+  background-color: #000000;
+  position: relative;
+  margin: auto;
+  height: 100%;
+}
+#config input[type=text],
+#config input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#config button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+#config p {
+  display: block;
+}
+#config .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+#config .digit {
+  text-align: center;
+  width: 2em;
+  font-size: 2em;
+}
+#config .icon-cancel-circle {
+  float: right;
+  color: #ffffff;
+  font-size: 2em;
+  top: 8px;
+  right: 15px;
+  position: absolute;
+  display: flex;
+}
+#config .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+#config img.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+#config .container {
+  padding: 16px;
+}
+#config span.psw {
+  float: right;
+  padding-top: 16px;
+}
+#config .lblConf {
+  display: block;
+  color: #ffffff;
+  font-size: 1em;
+  margin: 30px;
+}
+#config #presents {
+  border-radius: 4px;
+  font-size: 1em;
+}
+@media screen and (max-width: 300px) {
+  #config span.psw {
+    display: block;
+    float: none;
+  }
+  #config .cancelbtn {
+    width: 100%;
+  }
+}
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+  .app {
+    /* offset horizontal: half of image width and text area width */
+  }
+}
+.event {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 12px;
+  margin: 0px 30px;
+  padding: 2px 0px;
+}
+.event.listening {
+  background-color: #333333;
+  display: block;
+}
+.event.received {
+  background-color: #4B946A;
+  display: none;
+}
+@keyframes fade {
+  from {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+.blink {
+  animation: fade 3000ms infinite;
+  -webkit-animation: fade 3000ms infinite;
+}
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: 10px auto;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #FAF5F5;
+  border-radius: 17px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #1dc718;
+  color: #FFFFFF;
+  text-align: left;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 16px;
+  margin: 7px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #FAF5F5;
+  border-radius: 17px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+.orange {
+  background-color: #ff8000 !important;
+}
+.blue {
+  background-color: #0000ff !important;
+}
+.yellow {
+  background-color: #ffff00 !important;
+}
+.red {
+  background-color: #ff0000 !important;
+}
+.green {
+  background-color: #008000 !important;
+}
+.purple {
+  background-color: #800080 !important;
+}
