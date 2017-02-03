@@ -63,6 +63,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "Traning.speed.Boxing.Bag"
+        },
+        "nl.x-services.plugins.insomnia": {
+            "PACKAGE_NAME": "com.traning.spped.Bocing.Bag"
         }
     },
     "dependent_plugins": {

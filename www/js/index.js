@@ -4,6 +4,7 @@ var pause=false;
 var cronometer = null;
 var crono = null;
 var config = new Array();
+
 function isEmpty(arg){
 	if(arg==='undefined'||arg===null||isNaN(arg)) return true;
 }
@@ -46,6 +47,7 @@ var lang = en;
 var app = {
     // Application Constructor
         initialize: function() {
+
 		load();
 		$('.icon-cog').click(function(){
 			reset();
@@ -79,14 +81,17 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-       //	 app.receivedEvent('deviceready');
+		app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
 		beep1 = new Media('sounds/beep1.mp3');
 		beep2 = new Media('sounds/bel2.mp3');
 		beep3 = new Media('sounds/bone-crack.mp3');
 		beep4 = new Media('sounds/bel1.mp3');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
+		
+		
+		console.log('receivedEvent')
 		/*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -99,6 +104,7 @@ var app = {
 		*/
     },
 	start: function(){
+		
 		var seg = 1;
 		if(storage.getItem("sound")) beep1.play();
 		$('#btn').text(seg);
@@ -242,7 +248,7 @@ function changeColor(){
 		 
 	if(storage.getItem("sound")) beep3.play();
 	$('#btn')
-		.removeClass('orange yellow red blue green purple')
+		.removeClass()
 		.addClass(colors[n]);
 
 	return colors[n];
@@ -256,3 +262,4 @@ function numeroAleatorio(min, max) {
 	var n = Math.round(Math.random() * (max - min) + min);
 	return n ;
 }
+

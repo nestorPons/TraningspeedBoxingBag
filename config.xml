@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.traning.spped.Bocing.Bag"
+        id        = "com.traning.spped.Boxing.Bag"
         version   = "1.0.0">
 
     <name>Traning Speed Boxing Bag</name>
@@ -45,6 +45,8 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
+    <plugin name="cordova-plugin-media" />
+	<plugin name="cordova-plugin-insomnia" />
     <plugin name="cordova-plugin-battery-status" />
     <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-media-capture" />
@@ -59,7 +61,6 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-inappbrowser" />
-    <plugin name="cordova-plugin-media" />
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-vibration" />
@@ -71,7 +72,7 @@
     -->
 
     <!-- Define app icon for each platform. -->
-    <icon src="img/icon.png" />
+    <icon src="www/img/icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
