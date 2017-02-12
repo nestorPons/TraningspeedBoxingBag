@@ -4,33 +4,8 @@ var pause=false;
 var cronometer = null;
 var crono = null;
 var config = new Array();
-
-function isEmpty(arg){
-	if(arg==='undefined'||arg===null||isNaN(arg)) return true;
-}
 var present = new Array();
 var presents = new Array();
-presents[0] = {
-	name: 'H.I.I.T',
-	min:7,
-	max: 13,
-	seg: 30,
-	min: 0
-}
-presents[1] = {
-	name: 'Boxing',
-	min:10,
-	max: 15,
-	seg: 0,
-	min: 3
-}
-presents[2] = {
-	name: 'M.M.A.',
-	min:13,
-	max: 17,
-	seg: 0,
-	min: 5
-}
 var colors = ['orange', 'yellow', 'blue', 'red', 'green', 'purple'];
 var en = {
 	tile: 'Traning speed boxing bag',
@@ -47,7 +22,27 @@ var lang = en;
 var app = {
     // Application Constructor
         initialize: function() {
-
+			presents[0] = {
+				name: 'H.I.I.T',
+				mini:10,
+				max: 13,
+				seg: 30,
+				min: 0
+			}
+			presents[1] = {
+				name: 'Boxing',
+				mini:12,
+				max: 17,
+				seg: 0,
+				min: 3
+			}
+			presents[2] = {
+				name: 'M.M.A.',
+				mini:15,
+				max: 20,
+				seg: 0,
+				min: 5
+			}
 		load();
 		$('.icon-cog').click(function(){
 			reset();
@@ -89,9 +84,8 @@ var app = {
 		beep2 = new Media('sounds/bel2.mp3');
 		beep3 = new Media('sounds/bone-crack.mp3');
 		beep4 = new Media('sounds/bel1.mp3');
+		//window.plugins.Insomnia.keepAwake();
 		
-		
-		console.log('receivedEvent')
 		/*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -107,15 +101,15 @@ var app = {
 		
 		var seg = 1;
 		if(storage.getItem("sound")) beep1.play();
-		$('#btn').text(seg);
+		$('#ico').text(seg);
 			
 		crono  = setInterval(function(){
 			++seg;
-			$('#btn').text(seg);
+			$('#ico').text(seg);
 			if(seg>=4){
 				seg =0 ;
 				clearInterval(crono);		
-				$('#btn').text(lang.go);
+				$('#ico').text(lang.go);
 				app.training();
 			}else{
 				if(storage.getItem("sound")) beep1.play();
@@ -124,24 +118,23 @@ var app = {
 	},
 	training: function(){
 		if(storage.getItem("sound")) beep2.play()
-		$('#btn')
+		$('#ico')
 			.empty()
-			.addClass('icon-pause')
+			.attr('class','icon-pause')
+		$('#btn')
 			.click(function(){
 				if(pause){
 					pause = false;
-					$('#btn')
-						.removeClass('icon-play')
-						.addClass('icon-pause')
+					$('#ico')
+						.attr('class','icon-pause')
 				}else{
 					pause = true;
-					$('#btn')
-						.removeClass('icon-pause')
-						.addClass('icon-play')
+					$('#ico')
+						.attr('class','icon-play')
 				}
 			})
 
-		var time = numeroAleatorio(present.min,present.max);
+		var time = numeroAleatorio(present.mini,present.max);
 		var count = 0;
 		
 		cronometer = setInterval(function(){
@@ -173,7 +166,7 @@ var app = {
 			if(!pause){
 				if (count==time){
 					changeColor();
-					time =  numeroAleatorio(present.min,present.max);
+					time =  numeroAleatorio(present.mini,present.max);
 					count= 0;
 				}
 				count++;
@@ -184,9 +177,8 @@ var app = {
 function reset(){
 	clearInterval(crono);
 	clearInterval(cronometer);
-	$('#btn')
-		.removeClass()
-		.off()
+	$('#ico').removeClass();
+	$('#btn').off();
 	pause = false;
 	load();
 }
@@ -206,7 +198,9 @@ function load(){
 			present: present,
 		}		
 	})()
+
 	present = presents[config.present];
+		
 	
 	$('#configMin').val(leadingZero(config.min));
 	$('#configSeg').val(leadingZero(config.seg));
@@ -214,14 +208,13 @@ function load(){
 	$('#lblTimer').text(lang.timer);
 	$('#lblMusic').text(lang.music);
 	$('#soundOn').text(lang.on);
-	$('#soundOff')	.text(lang.off);
-
+	$('#soundOff').text(lang.off);
 	$('#sound').prop('checked',config.sound);
 	$('#lblPesents').text(lang.presents);
+	$('#ico').text(lang.start)
 	$('#btn')
-		.text(lang.start)
 		.click(function(){	
-			if($(this).text()==lang.start) app.start();
+			if($('#ico').text()==lang.start) app.start();
 		});
 	$('#mili').text('00')
 	$('#seg').text(leadingZero(config.seg));
@@ -239,7 +232,6 @@ function save(callback,min,seg){
 	if(typeof(callback) == 'function') callback();
 }
 function loadPresents(){
-	$()
 }
 function changeColor(){
 	var n = numeroAleatorio(0,colors.length);
@@ -248,8 +240,7 @@ function changeColor(){
 		 
 	if(storage.getItem("sound")) beep3.play();
 	$('#btn')
-		.removeClass()
-		.addClass(colors[n]);
+		.attr('class',colors[n]);
 
 	return colors[n];
 }
@@ -262,4 +253,6 @@ function numeroAleatorio(min, max) {
 	var n = Math.round(Math.random() * (max - min) + min);
 	return n ;
 }
-
+function isEmpty(arg){
+	if(arg==='undefined'||arg===null||isNaN(arg)) return true;
+}

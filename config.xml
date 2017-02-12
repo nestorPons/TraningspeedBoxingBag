@@ -45,7 +45,7 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <plugin name="cordova-plugin-media" />
+   <plugin name="cordova-plugin-media" spec="~2.4.1" />
 	<plugin name="cordova-plugin-insomnia" />
     <plugin name="cordova-plugin-battery-status" />
     <plugin name="cordova-plugin-camera" />
